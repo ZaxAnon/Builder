@@ -1,0 +1,25 @@
+Project: CityBuilder.
+Genre: City Goddamn Builder.
+
+Status: Nothing.
+
+Ambient: Three options being considered:
+	'Crystal, Togas and Spires' fantasy
+	Steampunk
+	Medioeval kind-of-realistic
+
+Key concept:
+	Winter\Spring\Summer\Fall cycle. WINTER IS COMING, and you'd better survive it.
+		Winter lasts a variable amount of man-years.
+		Possible need to fend off invasions and\or catalysms in the later stages of the game.
+
+	Humans\Servants split:
+		Humans are very limited in number, and do flexible roles. Gain experience in the jobs they perform, and unlock new jobs. Their number is small enough for each to be known by name from the player.
+
+		Servants are basically a commodity. Every servant requires some form of energy to work, can only do one type of job, and has to be built and maintained by a human. Try: Servants are robots\spirits, that can combine into higher jobs.
+
+		Buildings enable Humans and\or Servants of appropriate job to work in them.
+
+		Any un-assigned Human, and certain types of idling Servants, are automatically filled into the "Hauler" job.
+
+	Superprojects as new-mode gameplay and\or win conditions.
