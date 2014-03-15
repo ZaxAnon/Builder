@@ -5,11 +5,13 @@ using System.Collections;
 
 
 public class ClickManager : MonoBehaviour {
-    public GameObject grid;
-    public Material gridMat;
+    public GameObject gridPrefab;
     public ClickAction clickAction;
-    private GameObject selection;
-    private Transform transforml;
+
+
+    private Selection selection;
+    private Transform tf;
+    private Material gridMat;
     private Vector3 origin = new Vector3(0, 0, 0);
 	// Use this for initialization
 	void Start () {
@@ -18,10 +20,8 @@ public class ClickManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetMouseButtonDown(0))
-        {
-            doClickAction();
-        }
+        doClickAction();
+
 	}
     private void doClickAction()
     {
@@ -43,63 +43,50 @@ public class ClickManager : MonoBehaviour {
     }
     private void gridSelection(){
         //Create, update and delete dragging selection frames.
-        Vector3 pos = getPos();
+        
              
 
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log(pos);
-            // initialize plane & selection
-            origin = pos + new Vector3(0, 0.01f, 0);
-            selection = (GameObject) Instantiate(grid);
-            transforml = selection.transform;
-
-            transforml.position = origin;
-            transforml.localScale = new Vector3(1f / 2000f, 1, 1f / 2000f);
-            gridMat.mainTextureScale = new Vector2(1, 1);
+            selection = Selection.Create(gridPrefab);
         }
-        if (Input.GetMouseButton(0))
-        {
-            // update plane & selection
-            transforml.position = origin;
-            int sizeX = Mathf.CeilToInt(Mathf.Abs(pos[0] - origin[0])) +1;
-            int sizeZ = Mathf.CeilToInt(Mathf.Abs(pos[2] - origin[2])) +1;
-
-
-            if (pos[0] < origin[0])
-            {
-                sizeX -= 1;
-                transforml.Translate(-sizeX, 0, 0);
-            }
-            if (pos[2] < origin[2])
-            {
-                sizeZ -= 1;
-                transforml.Translate(0, 0, -sizeZ);
-            }
-
-            transforml.localScale = new Vector3(sizeX / 2000f, 1, sizeZ / 2000f);
-            gridMat.mainTextureScale = new Vector2(sizeX, sizeZ);
-            
-
-        }
+       
         if (Input.GetMouseButtonUp(0))
         {
             //delete plane & selection
             GameObject.DestroyImmediate(selection);
         }
     }
-    private Vector3 getPos()
-    {
-        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        var hit = new RaycastHit();
-        Physics.Raycast(ray, out hit, 100);
-        Vector3 pos = hit.point;
-        pos = new Vector3(Mathf.Floor(pos[0]),
-                    Mathf.Floor(pos[1]),
-                    Mathf.Floor(pos[2]));
-        return pos;
+    private void drawGrid(float x1, float x2, float z1, float z2){
+        // Draws a grid between (x1, y1) and (x2, y2)
+        GameObject grid = (GameObject) Instantiate(gridPrefab);
+        if (z1 > z2)
+        {
+            float tmp = z2;
+            z2 = z1;
+            z1 = tmp;
+        }
+        if (x1 > x2)
+        {
+            float tmp = x2;
+            x2 = x1;
+            x1 = tmp;
+        }
+
+
+        x1 = Mathf.Floor(x1);
+        x2 = Mathf.Ceil(x2);
+        z1 = Mathf.Floor(z1);
+        z2 = Mathf.Ceil(z2);
+        int sizeX = Mathf.RoundToInt(Mathf.Abs(x1 - x2));
+        int sizeZ = Mathf.RoundToInt(Mathf.Abs(z1 - z2));
+        Vector3 og = new Vector3(x1, 0, z1);
+        grid.transform.localPosition = og;
+        Material gridMaterial = grid.renderer.material;
+
 
     }
+
     private void placeBuilding()
     {
         if (tryPlaceBuilding()) clickAction = ClickAction.None;

@@ -50,6 +50,7 @@
      <Compile Include="Assets\Managers\CameraController.cs" />
      <Compile Include="Assets\Managers\ClickManager.cs" />
      <Compile Include="Assets\Managers\InputManager.cs" />
+     <Compile Include="Assets\Managers\Selection.cs" />
      <Compile Include="Assets\Managers\TerrainManager.cs" />
      <Compile Include="Assets\Managers\TileManager.cs" />
   </ItemGroup>
