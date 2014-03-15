@@ -9,10 +9,7 @@ public class ClickManager : MonoBehaviour {
     public ClickAction clickAction;
 
 
-    private Selection selection;
-    private Transform tf;
-    private Material gridMat;
-    private Vector3 origin = new Vector3(0, 0, 0);
+    private GameObject selection;
 	// Use this for initialization
 	void Start () {
 	
@@ -54,11 +51,12 @@ public class ClickManager : MonoBehaviour {
         if (Input.GetMouseButtonUp(0))
         {
             //delete plane & selection
-            GameObject.DestroyImmediate(selection);
+            GameObject.Destroy(selection);
         }
     }
     private void drawGrid(float x1, float x2, float z1, float z2){
         // Draws a grid between (x1, y1) and (x2, y2)
+        /*
         GameObject grid = (GameObject) Instantiate(gridPrefab);
         if (z1 > z2)
         {
@@ -83,6 +81,7 @@ public class ClickManager : MonoBehaviour {
         Vector3 og = new Vector3(x1, 0, z1);
         grid.transform.localPosition = og;
         Material gridMaterial = grid.renderer.material;
+         * */
 
 
     }

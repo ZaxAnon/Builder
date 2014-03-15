@@ -59,7 +59,7 @@ public class CameraController : MonoBehaviour {
             float r = 12f * Input.GetAxis("Mouse ScrollWheel");
             mainCamera.transform.Rotate(r, 0, 0);
 
-            if (mainCamera.transform.rotation.x > 0.70 || mainCamera.transform.rotation.x < 0.25)
+            if (mainCamera.transform.localRotation.x > 0.66 || mainCamera.transform.localRotation.x < 0.25)
             {
                 mainCamera.transform.Rotate(-r, 0, 0);
             }
