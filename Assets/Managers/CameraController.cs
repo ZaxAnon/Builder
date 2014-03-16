@@ -27,29 +27,29 @@ public class CameraController : MonoBehaviour {
     {
         if (Input.GetButton("Up"))
         {
-            tryTranslate(0, 0, 5f * camSpeed);
+            tryTranslate(0, 0, 5f * camSpeed * 60 * Time.deltaTime);
         }
         if (Input.GetButton("Down"))
         {
-            tryTranslate(0, 0, -5f * camSpeed);
+            tryTranslate(0, 0, -5f * camSpeed * 60 *Time.deltaTime);
         }
         if (Input.GetButton("Right"))
         {
-            tryTranslate(-5f * camSpeed, 0, 0);
+            tryTranslate(-5f * camSpeed * 60 * Time.deltaTime, 0, 0);
         }
         if (Input.GetButton("Left"))
         {
-            tryTranslate(5f * camSpeed, 0, 0);
+            tryTranslate(5f * camSpeed * 60 * Time.deltaTime, 0, 0);
         }
         if (Input.GetButton("RotateLeft"))
         {
-            transform.Rotate(0, 1f, 0);
-            tryTranslate(-0.3f, 0, 0);
+            transform.Rotate(0, 60f * Time.deltaTime, 0);
+            tryTranslate(-0.3f *60f* Time.deltaTime, 0, 0);
         }
         if (Input.GetButton("RotateRight"))
         {
-            transform.Rotate(0, -1f, 0);
-            tryTranslate(0.3f, 0, 0);
+            transform.Rotate(0, -60f * Time.deltaTime, 0);
+            tryTranslate(0.3f *60f* Time.deltaTime, 0, 0);
         }
         if (Input.GetAxis("Mouse ScrollWheel") != 0)
         {
