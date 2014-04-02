@@ -46,7 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Building.cs" />
      <Compile Include="Assets\Grid\RedSpot.cs" />
      <Compile Include="Assets\Managers\CameraController.cs" />
      <Compile Include="Assets\Managers\ClickManager.cs" />
@@ -54,6 +53,10 @@
      <Compile Include="Assets\Managers\Selection.cs" />
      <Compile Include="Assets\Managers\TerrainManager.cs" />
      <Compile Include="Assets\Managers\TileManager.cs" />
+     <Compile Include="Assets\Tile System\Building.cs" />
+     <Compile Include="Assets\Tile System\EmptyTile.cs" />
+     <Compile Include="Assets\Tile System\ResourceTile.cs" />
+     <Compile Include="Assets\Tile System\Tile.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

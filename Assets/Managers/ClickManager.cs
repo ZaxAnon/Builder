@@ -6,13 +6,19 @@ using System.Collections;
 
 public class ClickManager : MonoBehaviour {
     public GameObject gridPrefab;
+    public GameObject redSpot;
     public ClickAction clickAction;
+    public static ClickManager Instance=null;
 
 
     private GameObject selection;
-	// Use this for initialization
+
+
 	void Start () {
-	
+        if (Instance = null)
+        {
+            Instance = this;
+        }
 	}
 	
 	// Update is called once per frame
@@ -51,6 +57,7 @@ public class ClickManager : MonoBehaviour {
         if (Input.GetMouseButtonUp(0))
         {
             //delete plane & selection
+            selection.GetComponent<Selection>().destroyRedSpots();
             GameObject.Destroy(selection);
         }
     }

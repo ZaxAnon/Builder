@@ -3,8 +3,6 @@ using System.Collections;
 
 public class RedSpot : MonoBehaviour {
 
-    public Transform prefab;
-
 	// Use this for initialization
 	void Start () {
 	
