@@ -1,0 +1,58 @@
+﻿TestPlacing work done
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch SelectionTypeTwo
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   Assembly-CSharp-vs.csproj
+#	modified:   Assembly-CSharp.csproj
+#	deleted:    Assets/Building.cs
+#	modified:   Assets/Casa/Casa_Orrore_PURO.prefab
+#	modified:   Assets/Grid/Materials/GridLineMat.mat
+#	deleted:    Assets/Grid/RedSpot.prefab
+#	modified:   Assets/Grid/Selection.prefab
+#	modified:   Assets/Managers/ClickManager.cs
+#	modified:   Assets/Managers/InputManager.cs
+#	deleted:    Assets/Managers/Selection.cs
+#	modified:   Assets/Managers/TerrainManager.cs
+#	modified:   Assets/Managers/TileManager.cs
+#	modified:   Assets/Tile System/Building.cs
+#	modified:   Assets/test.unity
+#	modified:   Builder-csharp.sln
+#	modified:   Builder.sln
+#	modified:   Library/CurrentLayout.dwlt
+#	modified:   Library/InspectorExpandedItems.asset
+#	modified:   Library/ScriptAssemblies/Assembly-CSharp.dll
+#	modified:   Library/ScriptAssemblies/Assembly-CSharp.dll.mdb
+#	modified:   Library/assetDatabase3
+#	modified:   Library/guidmapper
+#	modified:   Library/metadata/34/3458507530d86ed4a9ea4234f2a7d805
+#	modified:   Library/metadata/45/45f6bd40a095e5f42b9450c1bb226a8e
+#	modified:   Library/metadata/49/499a04c4db5b93043b98ce8ccae5da3c
+#	modified:   Library/metadata/5c/5cdb20fb93827d543b8edf4fcd8be69e
+#	modified:   Library/metadata/63/63bf7df56f813ee4fbda602ff5285a8a
+#	modified:   Library/metadata/91/91ff7c37a70f17a42af28e09b5d9029e
+#	modified:   Library/metadata/b0/b0994d8da92850847915320a9e0dc13e
+#	modified:   Library/metadata/b3/b390b0237ea1bfe47a3300a15aa09eb7
+#	modified:   ProjectSettings/InputManager.asset
+#	modified:   ProjectSettings/QualitySettings.asset
+#	modified:   test_Data/Managed/Assembly-CSharp.dll
+#	modified:   test_Data/Managed/Assembly-CSharp.dll.mdb
+#	modified:   test_Data/PlayerConnectionConfigFile
+#	modified:   test_Data/mainData
+#	modified:   test_Data/output_log.txt
+#	modified:   test_Data/sharedassets0.assets
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	Assets/Grid/Placement.prefab
+#	Assets/Managers/Selections/
+#	Library/metadata/08/
+#	Library/metadata/0f/
+#	Library/metadata/42/
+#	Library/metadata/61/
+#	Library/metadata/a9/
+#	Temp/
+

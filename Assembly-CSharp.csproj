@@ -47,10 +47,12 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Grid\RedSpot.cs" />
+     <Compile Include="Assets\Managers\BuildingManager.cs" />
      <Compile Include="Assets\Managers\CameraController.cs" />
      <Compile Include="Assets\Managers\ClickManager.cs" />
      <Compile Include="Assets\Managers\InputManager.cs" />
-     <Compile Include="Assets\Managers\Selection.cs" />
+     <Compile Include="Assets\Managers\Selections\Placement.cs" />
+     <Compile Include="Assets\Managers\Selections\Selection.cs" />
      <Compile Include="Assets\Managers\TerrainManager.cs" />
      <Compile Include="Assets\Managers\TileManager.cs" />
      <Compile Include="Assets\Tile System\Building.cs" />

@@ -19,7 +19,6 @@ public class TerrainManager : MonoBehaviour {
 
         sizeX = x;
         sizeZ = z;
-        gridMat.mainTextureScale = new Vector2(sizeX, sizeZ);
         terrain.terrainData.size = new Vector3(sizeX, (sizeX/2+sizeZ/2), sizeZ);
 
         

@@ -6,6 +6,7 @@ using System.Collections;
 
 public class ClickManager : MonoBehaviour {
     public GameObject gridPrefab;
+    public GameObject placementPrefab;
     public GameObject redSpot;
     public ClickAction clickAction;
     public static ClickManager Instance=null;
@@ -23,6 +24,13 @@ public class ClickManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (Input.GetButtonDown("2"))
+        {
+            clickAction = ClickAction.None;
+            placementTest();
+        }
+
+
         doClickAction();
 
 	}
@@ -48,7 +56,6 @@ public class ClickManager : MonoBehaviour {
         //Create, update and delete dragging selection frames.
         
              
-
         if (Input.GetMouseButtonDown(0))
         {
             selection = Selection.Create(gridPrefab);
@@ -57,10 +64,11 @@ public class ClickManager : MonoBehaviour {
         if (Input.GetMouseButtonUp(0))
         {
             //delete plane & selection
-            selection.GetComponent<Selection>().destroyRedSpots();
+            selection.GetComponent<Selection>().destroyTiles();
             GameObject.Destroy(selection);
         }
     }
+
     private void drawGrid(float x1, float x2, float z1, float z2){
         // Draws a grid between (x1, y1) and (x2, y2)
         /*
@@ -98,6 +106,14 @@ public class ClickManager : MonoBehaviour {
         if (tryPlaceBuilding()) clickAction = ClickAction.None;
 
     }
+
+    private void placementTest()
+    {
+        GameObject selection = Placement.Create(placementPrefab);
+        selection.transform.parent = GameObject.Find("Buildings").transform;
+    }
+
+
     private bool tryPlaceBuilding()
     {
         return false;

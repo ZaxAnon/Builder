@@ -1,13 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Building : MonoBehaviour, Tile {
-    public Transform model;
 
+public class Building : MonoBehaviour, Tile {
+    //private static int sizeX = 2, sizeZ = 2;
 	// Use this for initialization
 	void Start () {
-        Instantiate(model);
-
 	}
 	
 	// Update is called once per frame
@@ -23,4 +21,5 @@ public class Building : MonoBehaviour, Tile {
     {
         return false;
     }
+
 }
