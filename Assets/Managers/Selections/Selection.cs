@@ -10,7 +10,7 @@ public class Selection : MonoBehaviour {
     public GameObject tilePrefab;
     public Material RedDiffuseMat, RedLineMat, BlueDiffuseMat, BlueLineMat;
     protected Dictionary<Vector2, GameObject> tiles = new Dictionary<Vector2, GameObject>();
-    protected int sizeX=3, sizeZ=2, oldX=0, oldZ=0;
+    protected int sizeX=0, sizeZ=0, oldX=0, oldZ=0;
 
     protected Material[] blueMats = new Material[2];
     protected Material[] redMats = new Material[2];
@@ -47,6 +47,7 @@ public class Selection : MonoBehaviour {
         transform.position = origin;
         transform.localScale = new Vector3(1f / 2000f, 1, 1f / 2000f);
         renderer.material.mainTextureScale = new Vector2(1, 1);
+        renderer.enabled = false;
 	}
     void OnGUI()
     {
@@ -58,7 +59,7 @@ public class Selection : MonoBehaviour {
     }
 
 	void Update () {
-        handleSize();
+        handleLocation();
 
         if (TimeSinceLastColorRefresh > ((sizeX + sizeZ + 100) / 1000))
         {
@@ -70,7 +71,7 @@ public class Selection : MonoBehaviour {
         }
         TimeSinceLastColorRefresh += Time.deltaTime;
 	}
-    protected void handleSize()
+    protected void handleLocation()
     {
         // This handles the LOCATION of the moving frame.
         if (Input.GetMouseButton(0))
@@ -99,7 +100,7 @@ public class Selection : MonoBehaviour {
                 transform.Translate(0, 0, 1 - sizeZ);
             }
 
-            renderer.enabled = false;
+
             if (oldX != sizeX || oldZ != sizeZ)
             {
                 makeTiles();
@@ -210,6 +211,11 @@ public class Selection : MonoBehaviour {
         {
             GameObject.Destroy(tile);
         }
+    }
+    void OnDestroy()
+    {
+        destroyTiles();
+        Debug.Log("Destroying tiles!");
     }
 
 }

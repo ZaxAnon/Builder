@@ -4,31 +4,21 @@ using System.Collections;
 
 
 
-public class ClickManager : MonoBehaviour {
-    public GameObject gridPrefab;
-    public GameObject placementPrefab;
-    public GameObject redSpot;
+public class ClickManager : Singleton<ClickManager>
+{
     public ClickAction clickAction;
-    public static ClickManager Instance=null;
 
 
     private GameObject selection;
 
 
 	void Start () {
-        if (Instance = null)
-        {
-            Instance = this;
-        }
+        
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetButtonDown("2"))
-        {
-            clickAction = ClickAction.None;
-            placementTest();
-        }
+
 
 
         doClickAction();
@@ -58,7 +48,7 @@ public class ClickManager : MonoBehaviour {
              
         if (Input.GetMouseButtonDown(0))
         {
-            selection = Selection.Create(gridPrefab);
+            selection = Selection.Create(Toolbox.Instance.gridPrefab);
         }
        
         if (Input.GetMouseButtonUp(0))
@@ -107,11 +97,7 @@ public class ClickManager : MonoBehaviour {
 
     }
 
-    private void placementTest()
-    {
-        GameObject selection = Placement.Create(placementPrefab);
-        selection.transform.parent = GameObject.Find("Buildings").transform;
-    }
+   
 
 
     private bool tryPlaceBuilding()

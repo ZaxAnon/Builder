@@ -2,7 +2,7 @@
 using System.Collections;
 using System.IO;
 
-public class TileManager : MonoBehaviour
+public class TileManager : Singleton<Toolbox>
 {
     public Terrain terrain;
     public static bool[,] walkable = new bool[TerrainManager.sizeX, TerrainManager.sizeZ];

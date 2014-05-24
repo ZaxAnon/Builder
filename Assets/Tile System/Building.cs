@@ -3,7 +3,7 @@ using System.Collections;
 
 
 public class Building : MonoBehaviour, Tile {
-    //private static int sizeX = 2, sizeZ = 2;
+    public int sizeX = 1, sizeZ = 1;
 	// Use this for initialization
 	void Start () {
 	}

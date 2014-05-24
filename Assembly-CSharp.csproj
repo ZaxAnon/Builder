@@ -55,10 +55,15 @@
      <Compile Include="Assets\Managers\Selections\Selection.cs" />
      <Compile Include="Assets\Managers\TerrainManager.cs" />
      <Compile Include="Assets\Managers\TileManager.cs" />
+     <Compile Include="Assets\Support Scripts\AStar.cs" />
+     <Compile Include="Assets\Support Scripts\PriorityQueue.cs" />
+     <Compile Include="Assets\Support Scripts\Singleton.cs" />
      <Compile Include="Assets\Tile System\Building.cs" />
      <Compile Include="Assets\Tile System\EmptyTile.cs" />
      <Compile Include="Assets\Tile System\ResourceTile.cs" />
      <Compile Include="Assets\Tile System\Tile.cs" />
+     <Compile Include="Assets\Toolboxes\Toolbox.cs" />
+     <Compile Include="Assets\Walkers\Walker.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
