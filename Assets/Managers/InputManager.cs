@@ -4,17 +4,26 @@ using System.Collections;
 public class InputManager : Singleton<Toolbox>
 {
     private GameObject placement;
+    private bool pathfinding = false;
     // In general, control of the input is split between three entities: ClickManager, which handles left clicks, CameraController, which handles QE\WASD for camera control, and the rest of the keyboard, which is here.
 	void Start () {
 	
 	}
 	
 	void Update () {
+        if (Input.GetButtonDown("3") && pathfinding==false)
+        {
+            /*
+            pathfinding = true;
+            Debug.Log("Activating pathfind");
+            Debug.Log(AStar.pathfind(new IntPoint(0, 0), new IntPoint(10, 0)));
+            */
+           
+        }
 	    if (Input.GetButtonDown("1"))
         {
             if (placement != null)
             {
-                
                 
                 var prefab =  placement.GetComponent<Placement>().prefab;
                 placeBuilding(Toolbox.Instance.testBuilding);
