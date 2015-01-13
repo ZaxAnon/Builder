@@ -1,7 +1,7 @@
 Project: CityBuilder.
 Genre: City Goddamn Builder.
 
-Status: Nothing.
+Status: Programming framework, camera working, general inheritance structure ready.
 
 Ambient: Three options being considered:
 	'Crystal, Togas and Spires' fantasy
@@ -23,3 +23,50 @@ Key concept:
 		Any un-assigned Human, and certain types of idling Servants, are automatically filled into the "Hauler" job.
 
 	Superprojects as new-mode gameplay and\or win conditions.
+
+	Different features unlock in different eras. 
+
+
+
+Basic CB Concept:
+	To function, a city needs inhabitants, which have needs and provide as workers. 
+	To fulfill the needs, workers get assigned to buildings, and produce and redistribute goods.
+	So, the following entities are in the game:
+		Inhabitants, which are both Humand and Robots\Spirits, which consume and produce;
+		Goods, which are produced, stored and consumed.
+		Buildings, which are built (duh) and unlock further job roles.
+
+Needs:
+	The foundation of it all is, of course, needs. Those can divided in three groups:
+		- Vital: Without this, your people die. Food, Water, Clothing\Heat during cold seasons.
+		- Working: Without those, certain types of work cannot be done. Work tools, Mana for spirits; ...
+		- Luxury: Those provide certain bonuses. Jewelry, ...
+
+Jobs:
+	Jobs are the roles citizien take to produce goods.
+	There's two basic roles, which do not require any buildings and are unlimited:
+		- Hauler: Moves Goods from where they are to where they need to be.
+		- Builder: Constructs buildings.
+
+	In the first particular feature of our CityBuilder, Jobs assume two different shapes: Those for Humans, and those for Spirits.
+	Humans can be any different job they're skilled for, and they consume goods at varying rates.
+	Spirits ARE a particular job, and can be evolved by fusing them into better jobs.
+	Certain jobs, which can be high-end things or improved versions of Spirit jobs, can be human-only. 
+		For example, a job could be Spirit Handler, making the building responsible for Spirit work function;
+		Another could be Spellcaster, unlocking special commands;
+		Or they could simple be a Teleporting Hauler, able to do the work of a Hauler spirit in a Space-Agnostic way.
+
+	A preliminary list of Jobs, for spirits and humans akin, could be the following:
+	(H stands for Human only)
+	Epoch 1 (Arrival, humans-only)
+		General-Purpose:
+			Hauler
+			Builder
+		Food-related:
+			Fishing
+			Hunting
+			Gathering
+		Building-related:
+			Lumberjacking
+		Mana-related things:
+			Mana Harvester
