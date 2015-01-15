@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 
 public class CameraController : MonoBehaviour {
+    [Range(0, 1)]
     public float offset;
     [Range(0, 1)]
     public float camSpeed;
     public float upY, lowY;
+    public float upRotation, lowRotation;
     float upX, upZ, lowX, lowZ;
     public Camera mainCamera;
+
+    private float expFactor = 1;
  // Use this for initialization
 	void Start () {
         int sizeX = TerrainManager.sizeX;
@@ -43,26 +47,37 @@ public class CameraController : MonoBehaviour {
         }
         if (Input.GetButton("RotateLeft"))
         {
-            transform.Rotate(0, 60f * Time.deltaTime, 0);
-            tryTranslate(-0.3f *60f* Time.deltaTime, 0, 0);
+
+            if (tryTranslate(-0.3f * 60f * Time.deltaTime, 0, 0))
+            {
+                transform.Rotate(0, 60f * Time.deltaTime, 0);
+            }
         }
         if (Input.GetButton("RotateRight"))
         {
-            transform.Rotate(0, -60f * Time.deltaTime, 0);
-            tryTranslate(0.3f *60f* Time.deltaTime, 0, 0);
+
+            if (tryTranslate(0.3f * 60f * Time.deltaTime, 0, 0))
+            {
+                transform.Rotate(0, -60f * Time.deltaTime, 0);
+            }
         }
         if (Input.GetAxis("Mouse ScrollWheel") != 0)
         {
-            tryTranslate(0, 22f * Input.GetAxis("Mouse ScrollWheel"), 0);
+            expFactor = Mathf.Min((float)12.0, expFactor * (float)1.3);
+            tryTranslate(0, 60f *  expFactor * camSpeed * Input.GetAxis("Mouse ScrollWheel"), 0);
 
 
-            float r = 12f * Input.GetAxis("Mouse ScrollWheel");
+            float r = 4f * Input.GetAxis("Mouse ScrollWheel");
             mainCamera.transform.Rotate(r, 0, 0);
 
-            if (mainCamera.transform.localRotation.x > 0.66 || mainCamera.transform.localRotation.x < 0.25)
+            if (mainCamera.transform.localRotation.x > upRotation || mainCamera.transform.localRotation.x < lowRotation)
             {
                 mainCamera.transform.Rotate(-r, 0, 0);
             }
+        }
+        else
+        {
+            expFactor = 1;
         }
     }
     private bool boundaryCheck() {
@@ -75,15 +90,18 @@ public class CameraController : MonoBehaviour {
         { return false; }
         return true;
     } 
-    private void tryTranslate(float x, float y, float z) {
+    private bool tryTranslate(float x, float y, float z) {
         x = x * camSpeed;
         y = y * camSpeed;
         z = z * camSpeed;
         transform.Translate(x,y,z);
         if (!boundaryCheck())
         {
+
             transform.Translate(-x,-y,-z);
+            return true;
         }
+        return false;
     }
 
 }
