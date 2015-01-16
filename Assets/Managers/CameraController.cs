@@ -7,7 +7,7 @@ public class CameraController : MonoBehaviour {
     public float rotationFocus;
     [Range(0f, 0.2f)]
     public float mapCuttingOffset;
-    [Range(0, 1)]
+    [Range(0, 5)]
     public float camSpeed;
     public float upYBoundary, lowYBoundary;
     public float upRotationBoundary, lowRotationBoundary;
@@ -89,7 +89,7 @@ public class CameraController : MonoBehaviour {
         else
         {
             timeSinceDecay += Time.deltaTime;
-            if (timeSinceDecay < (1 / 70f)) return;
+            if (timeSinceDecay < (1 / 61f)) return;
             timeSinceDecay = 0;
 
             expFactor = expFactor * exponentialDecay;
@@ -105,13 +105,13 @@ public class CameraController : MonoBehaviour {
         }
     }
     private void mouseScroll(float r) {
-        r = r * (float)0.25 * camSpeed;
-        tryTranslate(0, 15f * expFactor  * r, 0);
-        mainCamera.transform.Rotate(100 * r, 0, 0);
+        r = r * (float)0.25 * 15f * expFactor * camSpeed;
+        tryTranslate(0, r, 0);
+        mainCamera.transform.Rotate(r/5f, 0, 0);
         
         if (mainCamera.transform.localRotation.x > upRotationBoundary || mainCamera.transform.localRotation.x < lowRotationBoundary)
         {
-            mainCamera.transform.Rotate(100 * -r, 0, 0);
+            mainCamera.transform.Rotate(-r/5f, 0, 0);
         }
          
 
