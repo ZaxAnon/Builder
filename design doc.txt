@@ -70,3 +70,62 @@ Jobs:
 			Lumberjacking
 		Mana-related things:
 			Mana Harvester
+			
+			
+//building concepts
+
+Until the theme is decided i won't have much room to improve very specific buildings
+
+-Basic buildings aka what every fucking game must have-
+
+>>Houses are like, essential. can't have people living in the street, can we? or can we?
+
+>>being a city builder, unless we start with a few settlers with a carriage of supplies a la banished, we're going to need something to start with. Town hall is what people use most as a starting building but it's both stale and kind of... weird? you settle somewhere and the first fucking thing you do is build a huge building? 
+I'd rather have a little basic camp with a lot of functions (albeit limited) so you can start accumulating resources/building/reproducing/whatnot. Think a small tent camp with a stockpile, a small granary of sorts, a few places to live in and a toolhouse if that's how we're going to roll when it comes to gathering.
+Maybe this can not be built again? unless we're going for a multiple city model like civ i think this would be the best solution, given that micromanaging several larger cities may be impossible.
+
+>>Oh yeah, materials. Stockpiles in stronghold kind of sucked because of how fucking limited they were and how many of them you needed to place in order to grow large as fuark and how slow people got materials off of it. this was intentional since you weren't supposed to get fuckhuge, but that raises a few questions: are we going to go all AoE and say "fuck it, build some piece of shit building and it'll hold trillions" or do we make limited stockpiles/food storages/armory and all? this is kind of crucial to the production cycle we want to implement but really we need to decide what the fuck are we going to produce before deciding on a model. Oh, and they're not mutually exclusive. Why not have both depending on the resources you gather? It does make sense: you can gather 1000kg of firewood but i find it difficult to believe someone would just stockpile a ton of plutonium all together. given that it would blow up.
+
+>>roads. fucking roads. Public transportation may be a thing for civilians, but we're going to need roads where we're going. 
+
+>>education is essential. Are we just gonna dump a "go here so you fucks are not dumb shits anymore" or are we going to make the whole excruciating academic levels for the citizens to attend? again, depends on what the fuck are we doing
+
+>>people get sick. either we shoot their heads off (hey maybe there's some fucked up virus that occurs randomly or something that turns citizens into psychos and they start mowing down people at random?) or we bring them to a hospital. again, we can do both.
+
+this kind of sounds like magic tropico so far but oh well
+
+>>production facilities. We need to establish a production cycle, but again, what the fuck are we producing?
+
+>>same goes for military buildings. if we're going to have to fight people, that is. 
+
+>>entertainment. not a fan of getting shitfaced but we need to keep citizens entertained lest they gtfo or get mad. think The Settlers, if you force people to work too much they get pissed and leave. 
+
+>>so let's say some map zone is fucking horrible and spawns laser bears. are we making magic walls or some shit? like the eco powered walls in jak 2, remember those? you gotta keep em on at all times or you're FUCKED. that can be a gameplay mechanic for some levels idk.
+
+>>royal palace. because fuck you i'm rich.
+
+>>Law enforcement. self explanatory, and it's an universal concept to mankind so we're going to need that. 
+
+>>waste. the production cycle always ends in things thrown to waste. like my future. so we need something to take care of that: landfills, sewers, all that. pollution would be kind of a hassle but hey, why not. dump too much radioactive shit in the sewers (that's up to the factories but let's say the factories are run by dicks and that can also be some sort of micromanagement mechanic?) and you get uber monsters wreaking havoc in town. add that to the magic wall protecting the city and you need some tight play not to die like a little bitch.
+
+>>religion sucks unless it's space religion. or magic religion that gives you superpowers or something.
+
+>>food production facilities. yes, hyper oats may be an option. Asimov used yeast and it was classier though.
+
+>>that reminds me, we're going to need power. solar power is clean and all but we're going to use a lot more than that. either we use effort magic to generate effort electricity or we heat shit up until things spin fast enough to produce energy. 
+
+>>robots are here to stay. i don't give a shit if we do steampunk or magitek we're going to have robots in some way or another.
+
+>>commerce is always important. so markets will probably have to be a thing. 
+
+>>transporting to other cities mite b kool. simcity 4 had the option to make a whole region made out of big and small cities you could micromanage one at a time but that seems kind of complicated to let's just put airports that modify your demographic. also, crime and all since space niggers can come and do stuff.
+
+>>wonders, because beauty is important. let's not just have it be some "have x resource" requirement but let's have it require actual accomplishments for them to be built. also, time. 
+
+yeah this is kind of the basic gist of it, there's sub-buildings related to what i've said but again, we need to establish a theme first. i assumed we're going for an industrious society that expands rapidly but if we want something of a smaller/larger scale we're going to need to change a few things. 
+
+This is by no means complete, of course.
+
+
+
+
